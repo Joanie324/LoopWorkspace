@@ -310,6 +310,9 @@ jobs:
           FASTLANE_KEY: ${{ secrets.FASTLANE_KEY }}
           MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
 
+      # See if this improves the scanning for G7
+        curl https://github.com/motinis/G7SensorKit/commit/ba44beb3d1491c453f4f438443c3f8ba29146ab3.patch | git apply --directory=G7SensorKit -v --whitespace=fix
+
       # Upload to TestFlight
       - name: Fastlane upload to TestFlight
         run: bundle exec fastlane release
