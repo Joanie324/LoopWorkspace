@@ -283,7 +283,6 @@ jobs:
           curl https://github.com/motinis/G7SensorKit/commit/d86ac8e9cd523d1267587dd70c96597125eef7ab.patch | git apply --directory=G7SensorKit -v --whitespace=fix
           curl https://github.com/motinis/G7SensorKit/commit/205054e7537723c2aec58d807634b4853f687244.patch | git apply --directory=G7SensorKit -v --whitespace=fix
 
-
       # Patch Fastlane Match to not print tables
       - name: Patch Match Tables
         run: |
