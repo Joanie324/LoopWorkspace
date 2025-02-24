@@ -276,12 +276,13 @@ jobs:
           # and make sure to specify the submodule by setting "--directory=(submodule_name)".
           # Several patches may be added per submodule.
           # Adding comments (#) may be useful to easily tell the individual patches apart.
-          # See if this improves connectivity for G7 - include all 3 commits from motinis scan-fix branch
+
+          # See if this improves connectivity for G7 - include all 3 commits from motinis scan-fix branch
           curl https://github.com/motinis/G7SensorKit/commit/ba44beb3d1491c453f4f438443c3f8ba29146ab3.patch | git apply --directory=G7SensorKit -v --whitespace=fix
           curl https://github.com/motinis/G7SensorKit/commit/d86ac8e9cd523d1267587dd70c96597125eef7ab.patch | git apply --directory=G7SensorKit -v --whitespace=fix
           curl https://github.com/motinis/G7SensorKit/commit/205054e7537723c2aec58d807634b4853f687244.patch | git apply --directory=G7SensorKit -v --whitespace=fix
 
-      # Patch Fastlane Match to not print tables
+          # Patch Fastlane Match to not print tables
       - name: Patch Match Tables
         run: |
           TABLE_PRINTER_PATH=$(ruby -e 'puts Gem::Specification.find_by_name("fastlane").gem_dir')/match/lib/match/table_printer.rb
