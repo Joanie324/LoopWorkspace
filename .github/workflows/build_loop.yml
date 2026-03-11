@@ -218,7 +218,6 @@ jobs:
           https://raw.githubusercontent.com/loopandlearn/lnl-scripts/main/CustomizationSelect.sh)" \
           now_line \
           watch_title \
-          live_activity \
           negative_insulin \
           profiles
 
